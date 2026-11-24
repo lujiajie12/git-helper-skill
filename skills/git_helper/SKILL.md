@@ -32,13 +32,25 @@ python skills/git_helper/scripts/git_helper.py status
 当前对话直接引用本文件并要求“使用 Git规范协作助手”。需安装时可复制本目录到项目 `.agents/skills/git-helper/` 或用户 `~/.codex/skills/git-helper/`，不要未经要求修改用户环境。新会话未列出技能时可直接引用绝对路径。
 
 ```powershell
+# 在干净工作区中，从当前 HEAD 创建并切换到功能分支
 python skills/git_helper/scripts/git_helper.py branch feature/add-agent
+
+# 查看当前分支、工作区修改和远程仓库地址
 python skills/git_helper/scripts/git_helper.py status
-# 审阅修改后暂存指定文件
+
+# 完成修改并审阅后，仅暂存指定目录；实际使用时替换为本次相关路径
 git add -- skills/git_helper
+
+# 校验分支、提交标题及暂存内容，通过后创建提交（示例说明请按实际修改填写）
 python skills/git_helper/scripts/git_helper.py commit -m "feat(skill): 添加 Git 规范协作助手"
+
+# 工作区干净时，将当前功能分支推送到同名远程分支，并设置 upstream
 python skills/git_helper/scripts/git_helper.py push
+
+# 已有同名 upstream 且工作区干净时，仅快进拉取；分叉时停止
 python skills/git_helper/scripts/git_helper.py pull
+
+# 查看已有索引冲突，展示代码并保存快照；不自动修改文件或解决冲突
 python skills/git_helper/scripts/git_helper.py conflicts
 ```
 
