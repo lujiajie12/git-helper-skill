@@ -2,4 +2,4 @@
 
 
 def request_options():
-    return {"timeout": 10, "retries": 0}
+    return {"timeout": 30, "retries": 0}
