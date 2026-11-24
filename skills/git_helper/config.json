@@ -1,0 +1,7 @@
+{
+  "remote": "origin",
+  "feature_pattern": "feature/[a-z0-9][a-z0-9._/-]*",
+  "protected_branches": ["main", "master", "develop"],
+  "commit_types": ["feat", "fix", "docs", "style", "refactor", "perf", "test", "build", "ci", "chore", "revert"],
+  "max_subject_length": 100
+}

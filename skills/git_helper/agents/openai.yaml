@@ -1,0 +1,3 @@
+interface:
+  display_name: "Git规范协作助手"
+  short_description: "规范 feature 分支开发、提交与推送，展示冲突方案并安全保留原始代码"
